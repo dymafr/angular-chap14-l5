@@ -3,7 +3,7 @@ import { BehaviorSubject } from "rxjs";
 
 @Injectable({ providedIn: "root" })
 export class UserService {
-  public names: BehaviorSubject<string[]> = new BehaviorSubject([
+  public users$: BehaviorSubject<string[]> = new BehaviorSubject([
     "Julie",
     "Julien",
     "Tintin",

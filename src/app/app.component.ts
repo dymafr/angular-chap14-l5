@@ -9,7 +9,7 @@ import { UserService } from "./user.service";
 })
 export class AppComponent implements OnInit {
   public search = "";
-  public names$ = this.userService.names;
+  public names$ = this.userService.users$;
 
   constructor(private userService: UserService) {}
 
