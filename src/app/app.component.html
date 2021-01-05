@@ -1,8 +1,5 @@
-<div *ngIf="names$ | async; let names"
-	class="container d-flex flex-column flex-justify-content-center flex-align-items-center"
+<div class="container d-flex flex-column flex-justify-content-center flex-align-items-center"
 	style="padding-top: 200px;">
 	<input type="text" [(ngModel)]="search">
-	<ul>
-		<li *ngFor="let name of names | filter:search">{{name}}</li>
-	</ul>
+	<app-user-list [names]="names$ | async"></app-user-list>
 </div>
