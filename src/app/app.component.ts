@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Observable } from "rxjs";
 
 @Component({
   selector: "app-root",
@@ -7,7 +8,7 @@ import { Component, OnInit } from "@angular/core";
 })
 export class AppComponent implements OnInit {
   public search = "";
-  public names = ["Julie", "Julien", "Tintin", "Milou", "Paul", "Pierre"];
+  public names = new Observable(["Julie", "Julien", "Tintin", "Milou", "Paul", "Pierre"]);
 
   constructor() {}
 

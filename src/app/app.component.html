@@ -3,6 +3,6 @@
 	<button (click)="names.push('Louisa')">Ajouter Louisa</button>
 	<input type="text" [(ngModel)]="search">
 	<ul>
-		<li *ngFor="let name of names | filter:search">{{name}}</li>
+		<li *ngFor="let name of names$ | async | filter:search">{{name}}</li>
 	</ul>
 </div>
