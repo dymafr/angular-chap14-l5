@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from "@angular/core";
 })
 export class UserListComponent implements OnInit {
   @Input() names: string[];
+  @Input() search: string;
 
   constructor() {}
 
