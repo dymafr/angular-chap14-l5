@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Observable } from "rxjs";
+import { UserService } from "./user.service";
 
 @Component({
   selector: "app-root",
@@ -8,9 +9,9 @@ import { Observable } from "rxjs";
 })
 export class AppComponent implements OnInit {
   public search = "";
-  public names = new Observable(["Julie", "Julien", "Tintin", "Milou", "Paul", "Pierre"]);
+  public names$ = this.userService.names;
 
-  constructor() {}
+  constructor(private userService: UserService) {}
 
   ngOnInit(): void {}
 }
