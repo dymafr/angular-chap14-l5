@@ -1,6 +1,6 @@
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import localeFr from '@angular/common/locales/fr';
 import { registerLocaleData } from '@angular/common';
@@ -10,7 +10,7 @@ import { UserListComponent } from './user-list/user-list.component';
 registerLocaleData(localeFr);
 
 @NgModule({
-  imports: [BrowserModule, ReactiveFormsModule],
+  imports: [BrowserModule, FormsModule],
   declarations: [AppComponent, CbPipe, FilterPipe, UserListComponent],
   bootstrap: [AppComponent],
   providers: [{ provide: LOCALE_ID, useValue: 'fr-FR' }],
